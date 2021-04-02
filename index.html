@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+</head>
+<body>
+  <p>Welcome to Express</p>
+  <p>stats</p>
+ 
+  <button id ="test"> </button>
+  <div class = "message" > </div>
+
+ 
+
+
+
+ <script>
+   document.addEventListener('DOMContentloaded', function (){
+   document.getElementById('test').onclick = function(){
+
+const req = new XMLHttpRequest();
+req.open("GET",'/scott.json',true );
+req.spend();
+req.onload = function(){
+
+const json = JSON.parse(req.responseText);
+let html ="";
+
+json.forEach((test) =>{
+ html += "<div class 'test>"
+  let keys =Object.keys(test) 
+    console.log(keys)
+  })
+
+document.getElementByClass('message')[0].innerHTML =html
+
+
+}
+
+
+};
+   });
+
+</script>
+
+
+
+</body>
+</html>
